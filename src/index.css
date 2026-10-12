@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#FAF8F5] text-slate-800 antialiased font-sans;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1ede4;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Glass & Card effects */
+.farm-glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.farm-card {
+  @apply bg-white rounded-2xl border border-slate-200/80 shadow-sm transition-all duration-200 hover:shadow-md;
+}
+
+.farm-card-interactive {
+  @apply bg-white rounded-2xl border border-slate-200/80 shadow-sm transition-all duration-200 hover:shadow-md hover:border-farm-300;
+}
+
+/* Gradient accents */
+.farm-gradient-hero {
+  background: linear-gradient(135deg, #0b2715 0%, #1f5730 60%, #298b44 100%);
+}
+
+.farm-gradient-gold {
+  background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+}
+
+/* Print utilities */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}
